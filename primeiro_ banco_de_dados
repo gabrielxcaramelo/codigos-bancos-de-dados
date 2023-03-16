@@ -1,0 +1,23 @@
+CREATE TABLE  filmes (
+  id INT PRIMARY KEY,
+  nome VARCHAR(50),
+  genero VARCHAR(50),
+  classificacao INT,
+  tempo TIME,
+  diretor VARCHAR(50),
+  protagonista VARCHAR(50),
+  oscar BOOLEAN
+);
+
+
+
+/*comentario*/
+INSERT INTO filmes (id, nome, genero, classificacao, tempo, diretor, protagonista, oscar) VALUES
+(1, 'toy story', 'animacao' , 0 , '01:21:00', 'jonh lasseter', 'woody', true)
+(2, 'aquaman' ,  'acao' , 12 , '02:23:00', 'james han', 'aquaman' , false)
+(3, 'lucca'  , 'animacao' , 0 , '01:35:00' , 'enrico casarosa' , 'luca' , false);
+
+select * from filmes where genero = 'animacao'
+select * from filmes where faixa_etaria= > 0;
+select * from filmes where tempo_filme > '01:21:00';
+select * from filmes where oscar = true;
